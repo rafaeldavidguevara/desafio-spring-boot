@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "b8cc3010-28e1-4bba-abb1-168760c5c899",
+		"name": "Gestor_Tareas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46503939",
+		"_collection_link": "https://rd-1192723.postman.co/workspace/Rd's-Workspace~3bd15222-4d66-4ff7-889d-3039a46bf79e/collection/46503939-b8cc3010-28e1-4bba-abb1-168760c5c899?action=share&source=collection_link&creator=46503939"
+	},
+	"item": [
+		{
+			"name": "crearTarea",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/11.2.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Ordenar equipos sala este\",\n  \"descripcion\": \"Se deben ordenar los equipos por orden de envio\",\n  \"responsable\": \"Jose Fonseca\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/tarea/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tarea",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizarTareas",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/11.2.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n{\n    \"id\": 254,\n    \"nombre\": \"Ordenar los equipos de la sala norte\",\n    \"descripcion\": \"Se deben ordenar los equipos por orden de envio\",\n    \"responsable\": \"Elias Lopez\",\n    \"estado\": \"iniciado\"\n},\n{\n    \"id\": 252,\n    \"nombre\": \"Ordenar los equipos de la sala sur\",\n    \"descripcion\": \"Se deben ordenar los equipos por orden de fabricación\",\n    \"responsable\": \"Juana Perez\",\n    \"estado\": \"iniciado\"\n},\n{\n    \"id\": 253,\n    \"nombre\": \"Ordenar los equipos de la sala este\",\n    \"descripcion\": \"Se deben ordenar los equipos por orden numerico\",\n    \"responsable\": \"Jose Fonseca\",\n    \"estado\": \"iniciado\"\n}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/tarea/actualizarVarias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tarea",
+						"actualizarVarias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizarTarea",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "insomnia/11.2.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 254,\n    \"nombre\": \"Ordenar equipos sala este\",\n    \"descripcion\": \"Se deben ordenar los equipos por orden de envio\",\n    \"responsable\": \"Diana Mata\",\n    \"estado\": \"iniciado\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/tarea/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tarea",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerTareas",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/11.2.0"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tarea/obtenerTodas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tarea",
+						"obtenerTodas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerTarea",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/11.2.0"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tarea/obtener/153",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tarea",
+						"obtener",
+						"153"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarTarea",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/11.2.0"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/tarea/borrar/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tarea",
+						"borrar",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generarArchivoOpenapi",
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "insomnia/11.2.0"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v3/api-docs.yaml",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v3",
+						"api-docs.yaml"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
